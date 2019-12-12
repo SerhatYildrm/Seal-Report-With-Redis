@@ -1681,7 +1681,6 @@ namespace Seal.Model
         private bool _resultTableAvailable = false;
 
 
-
         public void FillResultTable()
         {
             bool isMaster = false;
@@ -1888,7 +1887,6 @@ namespace Seal.Model
             Progression = 70; //70% after getting result set
             _resultTableAvailable = true;
         }
-
 
         public void InvertDataTables()
         {

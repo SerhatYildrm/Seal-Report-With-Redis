@@ -58,6 +58,7 @@ namespace Seal.Model
 
         public override string ToString() {
             //PlaceHolder1
+            //return "toString()";
             return "Not implemented in the open source version. A commercial component is available at www.ariacom.com"; 
         }
 
@@ -65,6 +66,7 @@ namespace Seal.Model
 
         public virtual string ConvertToExcel(string destination)
         {
+            //return "ConvertToExcel";
             //PlaceHolder2
             throw new Exception("The Excel Converter is not implemented in the open source version...\r\nA commercial component is available at www.ariacom.com\r\n");
         }

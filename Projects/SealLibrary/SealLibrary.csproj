@@ -217,7 +217,6 @@
     <Compile Include="Model\DashboardItem.cs" />
     <Compile Include="Model\Dashboard.cs" />
     <Compile Include="Model\DashboardWidgetsPool.cs" />
-    <Compile Include="Model\MSSql.cs" />
     <Compile Include="Model\Navigation.cs" />
     <Compile Include="Model\NavigationContext.cs" />
     <Compile Include="Model\NavigationLink.cs" />

@@ -87,12 +87,6 @@ namespace Seal.Helpers
 
         public DataTable OdbcLoadDataTable(string odbcConnectionString, string sql)
         {
-            /*Writer: Serhat Yıldrım*/
-            if(this.DatabaseType == DatabaseType.Redis)
-            {
-                System.Windows.Forms.MessageBox.Show("TaskDatabaseHelper->  OdbcLoadDataTable()");
-            }
-            /**/
 
 
             DataTable table = new DataTable();
@@ -109,13 +103,6 @@ namespace Seal.Helpers
 
         public DataTable LoadDataTable(string connectionString, string sql)
         {
-
-            /*Writer: Serhat Yıldrım*/
-            if (this.DatabaseType == DatabaseType.Redis)
-            {
-                System.Windows.Forms.MessageBox.Show("TaskDatabaseHelper->  LoadDataTable()");
-            }
-            /**/
 
             DataTable table = new DataTable();
             try
