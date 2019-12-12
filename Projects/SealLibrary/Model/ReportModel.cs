@@ -1766,7 +1766,7 @@ namespace Seal.Model
 
                             redis.Connect(Connection.ConnectionString);
                             //var getRedisData = redis.GetData(Key);
-                            var getRedisData = redis.GetData("Seal_Orders2");
+                            var getRedisData = redis.GetData(Key);
                             redis.Close();
 
                             foreach (var col in this.Elements)

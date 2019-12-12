@@ -664,16 +664,7 @@ namespace Seal.Helpers
 
                 connection = new OdbcConnection(odbcConnectionString);
             }
-            if (provider.Contains("Redis"))
-            {
-                MessageBox.Show("Redisi gördüm");
-                connection = new OleDbConnection(connectionString);
-            }
 
-            else
-            {
-                connection = new OleDbConnection(connectionString);
-            }
 
             return connection;
         }

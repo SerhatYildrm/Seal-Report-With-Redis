@@ -1359,11 +1359,16 @@ namespace Seal
 
         public void ExecuteReport(bool render, string viewGUID, string outputGUID, string taskGUID)
         {
-
+            Boolean RedisServer = false;
 
             ReportModel model = selectedEntity as ReportModel;
 
-            if (model.Connection.DatabaseType == DatabaseType.Redis)
+            try
+            {
+                RedisServer = model.Connection.DatabaseType == DatabaseType.Redis;
+            }catch { }
+
+            if (RedisServer)
             {
                 if (_reportViewer == null || !_reportViewer.Visible)
                 {
@@ -1419,8 +1424,6 @@ namespace Seal
             /*Writer: Serhat Yıldırım*/
             if (e.ChangedItem.Label == "Database type")
             {
-
-
                 MetaConnection metaConnection = (MetaConnection)mainPropertyGrid.SelectedObject;
                 if (metaConnection.DatabaseType == DatabaseType.Redis)
                 {
