@@ -4,30 +4,65 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Seal.Model
 {
     public class MSSql
     {
 
-        public static String Connection()
+        public string sql = "";
+        public string connectionString = "";
+        public MSSql(string sql, string connectionString)
         {
-            string connectionString = @"Provider=SQLOLEDB.1;Persist Security Info=True;Data Source=192.168.2.10\sahinlogo;Initial Catalog=LOGO;User Id=seal;Password=54605460;";
+            this.sql = sql;
+            this.connectionString = connectionString;
+        }
+        
+        public List<string> Connection()
+        {
+
             OleDbConnection connection = new OleDbConnection(connectionString);
             connection.Open();
 
-
-
-            string sql = "SELECT @@VERSION";
             OleDbCommand command = new OleDbCommand(sql, connection);
-            string dwh = Convert.ToString(command.ExecuteScalar());
+            OleDbDataAdapter DA = new OleDbDataAdapter(command);
 
-            
+
+            System.Data.DataSet ds = new System.Data.DataSet();
+            DA.Fill(ds);
 
             command.Dispose();
             connection.Close();
 
-            return dwh;
+            string ColumnName = "";
+            string RowValue = "";
+            string strjson = "";
+
+            List<string> SecondData = new List<string>();
+            
+
+            for (int rowindex = 0; rowindex < ds.Tables[0].Rows.Count; rowindex++)
+            {
+                strjson = "{";
+                for (int columnindex = 0;columnindex< ds.Tables[0].Columns.Count; columnindex++)
+                {
+                    ColumnName = ds.Tables[0].Columns[columnindex].ColumnName;
+                    RowValue = ds.Tables[0].Rows[rowindex].ItemArray[columnindex].ToString();
+
+                    strjson += "'" + ColumnName + "':'" + RowValue + "',";
+
+                }
+                strjson += "}";
+                SecondData.Add(strjson);
+            }
+
+
+
+            return SecondData;
+
+            
         }
 
     }

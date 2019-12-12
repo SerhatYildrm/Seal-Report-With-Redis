@@ -23,7 +23,7 @@ namespace Seal.Model
         {
             List<JObject> redisData = new List<JObject>();
 
-            var datas = redisClient.LRange(key, 0, 10);
+            var datas = redisClient.LRange(key, 0, 0);
             foreach (var data in datas)
             {
                 string d = Encoding.UTF8.GetString(data, 0, data.Length);

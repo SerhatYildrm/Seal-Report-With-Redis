@@ -10,19 +10,14 @@
         report = ((ReportSource) source).Report;&#xD;
     }&#xD;
 &#xD;
-&#xD;
-   string data = MSSql.Connection();&#xD;
-   log.LogMessage(data);&#xD;
     &#xD;
 &#xD;
 &#xD;
-    &#xD;
+&#xD;
     &#xD;
     //Script executed when the report is initialized at execution&#xD;
     if (log != null) {&#xD;
         log.LogMessage("Executing 'Init Script' for source: " + source.Name +" ...");&#xD;
-&#xD;
-        //...&#xD;
     }&#xD;
 }&#xD;
 </InitScript><MetaData><Tables><MetaTable><GUID>e07f9600-0dfe-4ed1-a7c6-e1df2da16be3</GUID><Name>Redis Table</Name><Sql>Seal_Orders</Sql><DynamicColumns>true</DynamicColumns><KeepColumnNames>true</KeepColumnNames><Columns><MetaColumn><GUID>4afde813-3745-4a16-84e6-8d5c40ee07d9</GUID><Name>Seal_Orders.PROJECTREF</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>PROJECTREF</DisplayName><DisplayOrder>1</DisplayOrder></MetaColumn><MetaColumn><GUID>3ae77434-f540-477b-bf70-b48dc856a2bd</GUID><Name>Seal_Orders.LOGICALREF</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>LOGICALREF</DisplayName><DisplayOrder>2</DisplayOrder></MetaColumn><MetaColumn><GUID>b4b560ba-2636-4d78-bc8d-b79cecbf9877</GUID><Name>Seal_Orders.Date</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>Date</DisplayName><DisplayOrder>3</DisplayOrder></MetaColumn><MetaColumn><GUID>701814ff-ca58-4c0e-a917-1a8b0be67443</GUID><Name>Seal_Orders.CustomerName</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>CustomerName</DisplayName><DisplayOrder>4</DisplayOrder></MetaColumn><MetaColumn><GUID>0cb0874a-47d3-4002-b21b-05f2f64d54d1</GUID><Name>Seal_Orders.ParentCustomerName</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>ParentCustomerName</DisplayName><DisplayOrder>5</DisplayOrder></MetaColumn><MetaColumn><GUID>db7dba6e-1f69-42c7-ab37-c405c92b3109</GUID><Name>Seal_Orders.ProductsOnWait</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>ProductsOnWait</DisplayName><DisplayOrder>6</DisplayOrder></MetaColumn><MetaColumn><GUID>73a3fb26-e6da-423a-91e8-ebfa07f3115d</GUID><Name>Seal_Orders.ProductsOnShipped</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>ProductsOnShipped</DisplayName><DisplayOrder>7</DisplayOrder></MetaColumn><MetaColumn><GUID>8de07ccf-780d-426d-801b-89d62307832d</GUID><Name>Seal_Orders.TotalPendings</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>TotalPendings</DisplayName><DisplayOrder>8</DisplayOrder></MetaColumn><MetaColumn><GUID>426e889f-7aaf-4e7f-ba7f-a6bd9fe57847</GUID><Name>Seal_Orders.Description</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>Description</DisplayName><DisplayOrder>9</DisplayOrder></MetaColumn><MetaColumn><GUID>facdb62f-2cb5-41ce-b75d-2f3022e89000</GUID><Name>Seal_Orders.GROSSTOTAL</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>GROSSTOTAL</DisplayName><DisplayOrder>10</DisplayOrder></MetaColumn><MetaColumn><GUID>bcc39d1a-82fe-4da3-89b3-530c53ba2163</GUID><Name>Seal_Orders.TOTALDISCOUNTS</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>TOTALDISCOUNTS</DisplayName><DisplayOrder>11</DisplayOrder></MetaColumn><MetaColumn><GUID>290c661e-7d4f-49fb-880b-fd2dfd00d008</GUID><Name>Seal_Orders.TOTALVAT</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>TOTALVAT</DisplayName><DisplayOrder>12</DisplayOrder></MetaColumn><MetaColumn><GUID>d463e568-4d3a-4794-ad27-ff4a7dfc9df7</GUID><Name>Seal_Orders.OrderStatus</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>OrderStatus</DisplayName><DisplayOrder>13</DisplayOrder></MetaColumn><MetaColumn><GUID>5ed2ca94-6445-4cc9-8fd4-5d50d97a42a2</GUID><Name>Seal_Orders.OrderNo</Name><Type>Text</Type><Category>Redis Table</Category><DisplayName>OrderNo</DisplayName><DisplayOrder>14</DisplayOrder></MetaColumn></Columns></MetaTable></Tables></MetaData></MetaSource>
