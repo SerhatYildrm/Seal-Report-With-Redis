@@ -1760,11 +1760,10 @@ namespace Seal.Model
                             DataRow row = null;
                             ResultTable = new DataTable();
                             String[] splitData = { };
-                            var columns = this.Source.MetaData.Tables[0].Columns;
-                            var Key = Connection.Source.MetaData.Tables[0].Sql;
 
+                            var columns = this.FromTables[0].Columns;
+                            var Key = this.FromTables[0].Sql;
                             redis.Connect(Connection.ConnectionString);
-                            //var getRedisData = redis.GetData(Key);
                             var getRedisData = redis.GetData(Key);
                             redis.Close();
 
